@@ -1,0 +1,294 @@
+﻿Analisei o repositório. O acesso ao PostgreSQL e o Dapper parecem corretos, mas pelo comportamento que você descreveu ("clico em outra linha e demora para liberar") eu suspeito que **o problema não está mais no banco**, e sim no ciclo de eventos do `DataGridView` + atualização dos controles.
+
+Vamos por partes.
+
+---
+
+## 1. Seu `GetByIdAsync` está relativamente pesado para um clique
+
+Esta consulta:
+
+```sql
+SELECT
+    p.id,
+    p.name,
+    p.brandid AS BrandId,
+    ...
+    u.name AS LogUserName
+FROM tb_3dprinter p
+LEFT JOIN tb_useraccount u
+    ON p.logcruduserid = u.id
+WHERE p.id = @id
+AND p.logcrudtype <> '3'
+```
+
+Não é absurda, mas toda vez que você clica:
+
+```
+Clique linha
+ ↓
+abre conexão PostgreSQL
+ ↓
+executa SELECT
+ ↓
+faz JOIN
+ ↓
+mapeia Dapper
+ ↓
+atualiza vários controles
+```
+
+Para um formulário que já tem todos os dados no Grid, isso é desnecessário.
+
+Observe que seu Grid já carrega:
+
+```csharp
+public async Task<List<_3DPrinterGridModel>> GetGridDataAsync()
+```
+
+e traz:
+
+```sql
+p.id,
+p.name,
+b.name AS BrandName,
+p.purchasedate,
+p.purchaseprice,
+...
+```
+
+Ou seja: **você já tem quase tudo na memória.**
+
+---
+
+# Melhor solução: carregar do Grid, não do banco
+
+Quando clicar, pegue o objeto da linha.
+
+Altere seu evento:
+
+```csharp
+private async void gDataGridView_CellClick(
+    object sender,
+    DataGridViewCellEventArgs e)
+{
+    if (e.RowIndex < 0)
+        return;
+
+
+    var row = gDataGridView.Rows[e.RowIndex];
+
+
+    long id = Convert.ToInt64(
+        row.Cells["id"].Value);
+
+
+    await Load3dPrinterAsync(id);
+}
+```
+
+para:
+
+```csharp
+private void gDataGridView_CellClick(
+    object sender,
+    DataGridViewCellEventArgs e)
+{
+    if (e.RowIndex < 0)
+        return;
+
+
+    var model =
+        gDataGridView.Rows[e.RowIndex]
+        .DataBoundItem as _3DPrinterGridModel;
+
+
+    if(model == null)
+        return;
+
+
+    FillControlsFromGrid(model);
+}
+```
+
+Agora crie:
+
+```csharp
+private void FillControlsFromGrid(
+    _3DPrinterGridModel model)
+{
+    stbId.Text = model.Id.ToString();
+
+    stbPrinterName.Text = model.Name;
+
+
+    stxtPurchaseCost.Text =
+        model.PurchasePrice.ToString("N2");
+
+
+    stxtMaintenanceCost.Text =
+        model.MaintenanceCost.ToString("N2");
+
+
+    stxtUsefullLife.Text =
+        model.UsefullLife.ToString();
+
+
+    stxtElectricityConsumption.Text =
+        model.ElectricityConsumption.ToString("N2");
+
+
+    stxtDepreciation.Text =
+        model.DepreciationValue.ToString("N2");
+}
+```
+
+Resultado:
+
+Antes:
+
+```
+Clique
+  |
+  conexão PostgreSQL
+  |
+  SELECT
+  |
+  Dapper
+  |
+  FillControls
+  |
+  fim
+```
+
+Depois:
+
+```
+Clique
+ |
+ objeto já em memória
+ |
+ FillControls
+ |
+ fim
+```
+
+A resposta é praticamente instantânea.
+
+---
+
+# 2. Outro detalhe: seu DataGrid pode estar bloqueando porque você usa await no evento
+
+Esse padrão:
+
+```csharp
+private async void gDataGridView_CellClick(...)
+{
+    await Load3dPrinterAsync(id);
+}
+```
+
+faz o evento ficar aguardando.
+
+Eu evitaria.
+
+Use:
+
+```csharp
+private void gDataGridView_CellClick(
+    object sender,
+    DataGridViewCellEventArgs e)
+{
+    if(e.RowIndex < 0)
+        return;
+
+
+    var model =
+       gDataGridView.Rows[e.RowIndex]
+       .DataBoundItem as _3DPrinterGridModel;
+
+
+    if(model != null)
+       FillControlsFromGrid(model);
+}
+```
+
+Sem `async`.
+
+---
+
+# 3. Seu cache atual provavelmente nunca ajuda
+
+Você tem:
+
+```csharp
+if (_cache.Exists(id))
+```
+
+Mas quando muda de registro:
+
+```
+id 1
+id 2
+id 3
+id 4
+```
+
+cada um é uma nova consulta.
+
+O cache só ajuda se voltar:
+
+```
+1
+2
+3
+1
+```
+
+Mesmo assim, para uma tela CRUD, carregar do Grid é mais simples.
+
+---
+
+# 4. Verifique também o ComboBox
+
+No seu `FillControls` existe:
+
+```csharp
+ddownBrand.SelectedValue = model.BrandId;
+```
+
+Esse controle pode ser um gargalo.
+
+ComboBox com DataSource faz:
+
+* procurar item
+* disparar eventos
+* atualizar binding
+
+Se você notar lentidão mesmo sem banco, teste temporariamente removendo:
+
+```csharp
+ddownBrand.SelectedValue = model.BrandId;
+```
+
+Se ficar rápido, achamos o ponto.
+
+---
+
+## Minha recomendação para sua tela
+
+Eu deixaria assim:
+
+* `LoadDataGridAsync()` → busca todos os registros
+* Grid guarda `_gridData`
+* Clique na linha → usa `_gridData`
+* Banco somente em:
+
+  * Inserir
+  * Alterar
+  * Excluir
+  * Atualizar Grid
+
+Esse é o padrão usado em aplicações desktop CRUD.
+
+Pelo código que você enviou, eu apostaria que a lentidão vai desaparecer mudando o clique para trabalhar com `_3DPrinterGridModel` em memória.

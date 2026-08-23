@@ -1,0 +1,22 @@
+﻿CREATE TABLE IF NOT EXISTS public.tb_filament
+(
+    id integer NOT NULL,
+    idbrand integer,
+    idcategory integer,
+    idsubcategory integer,
+    idcolor integer,
+    idunit integer,
+    filamentcost numeric(10,2),
+    idpreset integer,
+    logcruduserid bigint,
+    logcruddate timestamp without time zone,
+    logcrudtype character(1) COLLATE pg_catalog."default" DEFAULT NULL::bpchar,
+    idfilamenttype bigint,
+    qtinventory numeric(10,2),
+    name character varying(255) COLLATE pg_catalog."default" DEFAULT NULL::character varying,
+    recommnozzletemp integer,
+    recommplatetemp integer,
+    recommflowratio numeric(10,2) DEFAULT NULL::numeric,
+    CONSTRAINT tb_filament_pkey PRIMARY KEY (id)
+)
+

@@ -1,0 +1,267 @@
+TB Parâmetros Gerais            ADMIN
+TB Custo Eletricidade           ADMIN
+TB Impressora                   ADMIN
+TB Manutenção Impressora        ADMIN
+TB Usuário                      ADMIN
+TB Filamento                    INSUMOS 
+TB Calibragem Filamento         INSUMOS
+TB Preset                       PRODUÇAO
+TB Fornecedor                   COMPRAS
+TB Marca                        COMPRAS
+TB Cor                          INSUMOS
+TB Tipo Filamento               INSUMOS
+TB Categoria Filamento          INSUMOS
+TB Sub-Categoria Filamento      INSUMOS
+TB Unidade de Medida            COMPRAS
+TB Compra                       COMPRAS
+TB Itens Compra                 COMPRAS
+TB Produto                      VENDAS 
+TB Versão Produto               VENDAS (uma versão para cada composição)
+TB Composição Versão Produto    VENDAS (filamentos e cores que compõem a versão do produto)
+TB Margem Produto               VENDAS
+TB Desconto Produto             VENDAS
+TB Composição Custo Produto     VENDAS
+TB Categoria Produto            VENDAS
+TB Sub-Categoria Produto        VENDAS
+TB Pedidos                      VENDAS
+TB Embalagem                    INSUMO
+TB Plataforma                   VENDAS
+TB Produção                     PRODUÇÃO
+TB Item de Custo                VENDAS
+TB Licenças                     INSUMOS
+TB Histórico Licenças           INSUMOS
+
+TB Parâmetros Gerais
+    id
+    Nome
+    Valor
+
+TB Custo Eletricidade
+    id
+    data inicial
+    data Final
+    valor por kW/h
+
+TB Impressora
+    id
+    Nome
+    id Fabricante
+    Data Compra
+    Data inicio operação
+    Valor Compra (R$)
+    Custo manutenção Anual previsto (R$)
+    Custo manutenção Anual realizado (R$)
+    Vida util (h)
+    Consumo (kW/h)
+    Depreciação (R$/h)
+
+TB Manutenção Impressora
+    id
+    id Impressora
+    data
+    descrição
+    valor
+
+TB Usuário
+    id
+    Nome
+    email
+    Status (ativo, inativo)
+    senha
+    
+TB Filamento
+    id
+    id Tipo
+    id Cor
+    id Fabricante
+    Nome (Tipo + Cor + Fabricante)
+    id Categoria
+    id Sub-Categoria
+    id Unidade de Medida
+    Quantidade
+    Temperatura bico de
+    Temperatura bico até
+    Temperatura da mesa
+    Fluxo
+
+TB Calibragem Filamento
+    id
+    data
+    id filamento
+    Temperatura bico
+    Temperatura mesa
+    Fluxo
+    << ver quais outras calibragens >>
+
+TB Preset
+    id
+    Nome
+    Qt Material
+    Tempo de máquina
+
+TB Fornecedor
+    id
+    razão social
+    email
+    url
+    whatsapp
+    telefone
+    endereço
+
+TB Marca
+    id
+    Nome
+
+TB Cor
+    id
+    Nome
+
+TB Tipo de Filamento
+    id
+    Nome
+
+TB Categoria Filamento
+    id
+    Nome
+
+TB Sub-Categoria Filamento
+    id
+    Nome
+
+TB Unidade de Medida
+    id
+    Nome
+
+TB Compra Insumo
+    id
+    data
+    id Fornecedor
+    Nota Fiscal
+    Frete
+
+TB Itens Compra
+    id
+    id tipo insumo (filamento, embalagem)
+    id insumo
+    Preço Unitário
+    Quantidade
+    Frete (calculado: Frete Total do Pedido * (preço do item / valor pedido))
+    Preço Final (Frete do item + Preço de Compra)
+    Status (se o filamento estiver em uso = Ativo)
+
+TB Produto
+    id
+    Código
+    Nome
+    id Embalagem
+    Peso (g)
+    Comprimento
+    Largura
+    Altura
+    id licença
+    status (ativo, inativo)
+
+TB Versão do Produto
+    id
+    id Produto
+    Nome
+    descrição
+    status (ativo, inativo)
+
+TB Composição Versão Produto
+    id
+    id Versão do Produto
+    id Filamento
+    nome da parte 
+    id cor
+
+TB Margem Produto
+    id
+    id Produto
+    id plataforma
+    data inicial
+    data Final
+
+TB Desconto Produto
+    id
+    id Produto
+    id Plataforma
+    data inicial
+    data Final
+
+TB Composição Custo Produto
+    id
+    id Produto
+    id Item de Custo
+
+TB Categoria Produto
+    id
+    Nome
+
+TB Sub-Categoria Produto
+    id
+    Nome
+
+TB Vendas
+    id
+    data
+    id Produto
+    Valor Vendas
+    data envio
+    id plataforma
+
+TB Embalagem
+    id
+    Nome
+    id Fabricante
+    id Tipo Embalagem
+    Comprimento
+    Largura
+    Altura
+
+TB Plataforma
+    id
+    Nome
+    taxa por Venda
+    taxa por item
+
+TB Produção
+    id
+    data
+    id Impressora
+    id Preset
+    id Produto
+    id Filamento
+    Tempo de máquina (h)
+    Custo Material
+    Depreciação
+    Eletricidade
+    Custo de Produção
+
+TB Item de Custo
+    id
+    Nome (eletricidade, embalagem, filamento, licença, )
+
+TB Licenças
+    id
+    Nome
+    Designer
+    url
+
+TB Histórico Licenças
+    id
+    id licença
+    Valor
+    Tipo Pagamento (mensal, anual)
+    Data inicio
+    Data término
+    renovação automática (sim, não)
+    alerta renovação (sim, não)
+    Status (ativa, inativa)
+
+
+
+
+
+
+

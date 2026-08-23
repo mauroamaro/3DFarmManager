@@ -1,0 +1,15 @@
+Calulo de Depreciação da Impressora
+	(Preço da impressora + custo de manutenção estimado) / vida útil da impressora (em horas) = Depreciação (R$/h)
+
+Calculo do Custo de Produção
+	Custo de Material (R$) = Peso da Peça (g) / 1000 * Custo do Kg de filamento (R$/Kg)
+	Total de Horas de Impressão = (Qt Horas / 60) + Minutos + (Dias * 24)
+	Depreciação (R$) = Total de Horas de Impressão * Depreciação (R$/h)
+	Eletricidade (R$) = Total de Horas de Impressão * Consumo de energia da impressora (kW/h) * Custo da eletricidade (R$/kW/h)
+	
+	Custo de Produção Total (R$) =
+		((Custo do Material (R$) + Depreciação (R$) + Eletricidade (R$)) / (1 - % taxa de falhas/100)) + Consumíveis 
+
+Calculo do Custo das horas trabalhadas
+
+

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTitleAndGrid = new System.Windows.Forms.Panel();
             this.panelDataGrid = new System.Windows.Forms.Panel();
             this.gDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -44,13 +44,7 @@
             this.gtbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.gcbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelData = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.gActionBtPresets = new _3DFarmManager.Framework.Controls.GActionButton();
-            this.gActionBtSubCategory = new _3DFarmManager.Framework.Controls.GActionButton();
-            this.gActionBtCategory = new _3DFarmManager.Framework.Controls.GActionButton();
-            this.gActionBtUnits = new _3DFarmManager.Framework.Controls.GActionButton();
-            this.gActionBtColors = new _3DFarmManager.Framework.Controls.GActionButton();
-            this.gActionBtTypes = new _3DFarmManager.Framework.Controls.GActionButton();
+            this.panelAuxTables = new System.Windows.Forms.Panel();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.gtbProfileFlowRate = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -89,13 +83,19 @@
             this.panelStatus = new System.Windows.Forms.Panel();
             this.panelActions = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.gActionBtPresets = new _3DFarmManager.Framework.Controls.GActionButton();
+            this.gActionBtSubCategory = new _3DFarmManager.Framework.Controls.GActionButton();
+            this.gActionBtCategory = new _3DFarmManager.Framework.Controls.GActionButton();
+            this.gActionBtUnits = new _3DFarmManager.Framework.Controls.GActionButton();
+            this.gActionBtColors = new _3DFarmManager.Framework.Controls.GActionButton();
+            this.gActionBtTypes = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtDelete = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtEdit = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtRefresh = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtCancel = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtSave = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtAdd = new _3DFarmManager.Framework.Controls.GActionButton();
-            this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.panelTitleAndGrid.SuspendLayout();
             this.panelDataGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gDataGridView)).BeginInit();
@@ -103,7 +103,7 @@
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictUCTitle)).BeginInit();
             this.panelData.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelAuxTables.SuspendLayout();
             this.guna2GroupBox4.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -137,31 +137,31 @@
             this.gDataGridView.AllowUserToDeleteRows = false;
             this.gDataGridView.AllowUserToOrderColumns = true;
             this.gDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            this.gDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.gDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
             this.gDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gDataGridView.ColumnHeadersHeight = 45;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(104)))), ((int)(((byte)(95)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gDataGridView.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(104)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.gDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gDataGridView.EnableHeadersVisualStyles = false;
             this.gDataGridView.GridColor = System.Drawing.Color.LightSlateGray;
@@ -169,14 +169,14 @@
             this.gDataGridView.MultiSelect = false;
             this.gDataGridView.Name = "gDataGridView";
             this.gDataGridView.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(102)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(102)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gDataGridView.RowHeadersVisible = false;
             this.gDataGridView.RowTemplate.Height = 26;
             this.gDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -342,7 +342,7 @@
             // panelData
             // 
             this.panelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
-            this.panelData.Controls.Add(this.panel1);
+            this.panelData.Controls.Add(this.panelAuxTables);
             this.panelData.Controls.Add(this.guna2GroupBox4);
             this.panelData.Controls.Add(this.guna2GroupBox3);
             this.panelData.Controls.Add(this.guna2GroupBox2);
@@ -352,258 +352,20 @@
             this.panelData.Size = new System.Drawing.Size(1280, 410);
             this.panelData.TabIndex = 9;
             // 
-            // panel1
+            // panelAuxTables
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
-            this.panel1.Controls.Add(this.gActionBtPresets);
-            this.panel1.Controls.Add(this.gActionBtSubCategory);
-            this.panel1.Controls.Add(this.gActionBtCategory);
-            this.panel1.Controls.Add(this.gActionBtUnits);
-            this.panel1.Controls.Add(this.gActionBtColors);
-            this.panel1.Controls.Add(this.gActionBtTypes);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(121, 410);
-            this.panel1.TabIndex = 57;
-            // 
-            // gActionBtPresets
-            // 
-            this.gActionBtPresets.ActionEnabled = true;
-            this.gActionBtPresets.BorderRadius = 6;
-            this.gActionBtPresets.CheckedState.Parent = this.gActionBtPresets;
-            this.gActionBtPresets.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
-            this.gActionBtPresets.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtPresets.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.gActionBtPresets.CustomImages.Parent = this.gActionBtPresets;
-            this.gActionBtPresets.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtPresets.DisabledCursor = System.Windows.Forms.Cursors.No;
-            this.gActionBtPresets.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtPresets.DisabledForeColor = System.Drawing.Color.Gray;
-            this.gActionBtPresets.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtPresets.DisabledHoverFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtPresets.DisabledHoverForeColor = System.Drawing.Color.Gray;
-            this.gActionBtPresets.DisabledImage = null;
-            this.gActionBtPresets.EnabledBorderColor = System.Drawing.Color.Black;
-            this.gActionBtPresets.EnabledCursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtPresets.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtPresets.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtPresets.EnabledImage = null;
-            this.gActionBtPresets.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtPresets.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gActionBtPresets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtPresets.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
-            this.gActionBtPresets.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
-            this.gActionBtPresets.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtPresets.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
-            this.gActionBtPresets.HoverState.Parent = this.gActionBtPresets;
-            this.gActionBtPresets.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.gActionBtPresets.ImageSize = new System.Drawing.Size(18, 20);
-            this.gActionBtPresets.Location = new System.Drawing.Point(11, 266);
-            this.gActionBtPresets.Name = "gActionBtPresets";
-            this.gActionBtPresets.ShadowDecoration.Parent = this.gActionBtPresets;
-            this.gActionBtPresets.Size = new System.Drawing.Size(96, 42);
-            this.gActionBtPresets.TabIndex = 1;
-            this.gActionBtPresets.Text = "Presets";
-            this.gActionBtPresets.Click += new System.EventHandler(this.gActionButton11_Click);
-            // 
-            // gActionBtSubCategory
-            // 
-            this.gActionBtSubCategory.ActionEnabled = true;
-            this.gActionBtSubCategory.BorderRadius = 6;
-            this.gActionBtSubCategory.CheckedState.Parent = this.gActionBtSubCategory;
-            this.gActionBtSubCategory.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
-            this.gActionBtSubCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtSubCategory.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.gActionBtSubCategory.CustomImages.Parent = this.gActionBtSubCategory;
-            this.gActionBtSubCategory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtSubCategory.DisabledCursor = System.Windows.Forms.Cursors.No;
-            this.gActionBtSubCategory.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtSubCategory.DisabledForeColor = System.Drawing.Color.Gray;
-            this.gActionBtSubCategory.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtSubCategory.DisabledHoverFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtSubCategory.DisabledHoverForeColor = System.Drawing.Color.Gray;
-            this.gActionBtSubCategory.DisabledImage = null;
-            this.gActionBtSubCategory.EnabledBorderColor = System.Drawing.Color.Black;
-            this.gActionBtSubCategory.EnabledCursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtSubCategory.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtSubCategory.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtSubCategory.EnabledImage = null;
-            this.gActionBtSubCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtSubCategory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gActionBtSubCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtSubCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
-            this.gActionBtSubCategory.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
-            this.gActionBtSubCategory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtSubCategory.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
-            this.gActionBtSubCategory.HoverState.Parent = this.gActionBtSubCategory;
-            this.gActionBtSubCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.gActionBtSubCategory.ImageSize = new System.Drawing.Size(18, 20);
-            this.gActionBtSubCategory.Location = new System.Drawing.Point(11, 216);
-            this.gActionBtSubCategory.Name = "gActionBtSubCategory";
-            this.gActionBtSubCategory.ShadowDecoration.Parent = this.gActionBtSubCategory;
-            this.gActionBtSubCategory.Size = new System.Drawing.Size(96, 42);
-            this.gActionBtSubCategory.TabIndex = 1;
-            this.gActionBtSubCategory.Text = "Subcategorias de Filamentos";
-            // 
-            // gActionBtCategory
-            // 
-            this.gActionBtCategory.ActionEnabled = true;
-            this.gActionBtCategory.BorderRadius = 6;
-            this.gActionBtCategory.CheckedState.Parent = this.gActionBtCategory;
-            this.gActionBtCategory.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
-            this.gActionBtCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtCategory.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.gActionBtCategory.CustomImages.Parent = this.gActionBtCategory;
-            this.gActionBtCategory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtCategory.DisabledCursor = System.Windows.Forms.Cursors.No;
-            this.gActionBtCategory.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtCategory.DisabledForeColor = System.Drawing.Color.Gray;
-            this.gActionBtCategory.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtCategory.DisabledHoverFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtCategory.DisabledHoverForeColor = System.Drawing.Color.Gray;
-            this.gActionBtCategory.DisabledImage = null;
-            this.gActionBtCategory.EnabledBorderColor = System.Drawing.Color.Black;
-            this.gActionBtCategory.EnabledCursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtCategory.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtCategory.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtCategory.EnabledImage = null;
-            this.gActionBtCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtCategory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gActionBtCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
-            this.gActionBtCategory.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
-            this.gActionBtCategory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtCategory.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
-            this.gActionBtCategory.HoverState.Parent = this.gActionBtCategory;
-            this.gActionBtCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.gActionBtCategory.ImageSize = new System.Drawing.Size(18, 20);
-            this.gActionBtCategory.Location = new System.Drawing.Point(11, 166);
-            this.gActionBtCategory.Name = "gActionBtCategory";
-            this.gActionBtCategory.ShadowDecoration.Parent = this.gActionBtCategory;
-            this.gActionBtCategory.Size = new System.Drawing.Size(96, 42);
-            this.gActionBtCategory.TabIndex = 1;
-            this.gActionBtCategory.Text = "Categorias de Filamentos";
-            this.gActionBtCategory.Click += new System.EventHandler(this.gActionButton9_Click);
-            // 
-            // gActionBtUnits
-            // 
-            this.gActionBtUnits.ActionEnabled = true;
-            this.gActionBtUnits.BorderRadius = 6;
-            this.gActionBtUnits.CheckedState.Parent = this.gActionBtUnits;
-            this.gActionBtUnits.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
-            this.gActionBtUnits.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtUnits.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.gActionBtUnits.CustomImages.Parent = this.gActionBtUnits;
-            this.gActionBtUnits.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtUnits.DisabledCursor = System.Windows.Forms.Cursors.No;
-            this.gActionBtUnits.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtUnits.DisabledForeColor = System.Drawing.Color.Gray;
-            this.gActionBtUnits.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtUnits.DisabledHoverFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtUnits.DisabledHoverForeColor = System.Drawing.Color.Gray;
-            this.gActionBtUnits.DisabledImage = null;
-            this.gActionBtUnits.EnabledBorderColor = System.Drawing.Color.Black;
-            this.gActionBtUnits.EnabledCursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtUnits.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtUnits.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtUnits.EnabledImage = null;
-            this.gActionBtUnits.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtUnits.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gActionBtUnits.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtUnits.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
-            this.gActionBtUnits.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
-            this.gActionBtUnits.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtUnits.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
-            this.gActionBtUnits.HoverState.Parent = this.gActionBtUnits;
-            this.gActionBtUnits.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.gActionBtUnits.ImageSize = new System.Drawing.Size(18, 20);
-            this.gActionBtUnits.Location = new System.Drawing.Point(11, 116);
-            this.gActionBtUnits.Name = "gActionBtUnits";
-            this.gActionBtUnits.ShadowDecoration.Parent = this.gActionBtUnits;
-            this.gActionBtUnits.Size = new System.Drawing.Size(96, 42);
-            this.gActionBtUnits.TabIndex = 1;
-            this.gActionBtUnits.Text = "Unidades";
-            // 
-            // gActionBtColors
-            // 
-            this.gActionBtColors.ActionEnabled = true;
-            this.gActionBtColors.BorderRadius = 6;
-            this.gActionBtColors.CheckedState.Parent = this.gActionBtColors;
-            this.gActionBtColors.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
-            this.gActionBtColors.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtColors.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.gActionBtColors.CustomImages.Parent = this.gActionBtColors;
-            this.gActionBtColors.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtColors.DisabledCursor = System.Windows.Forms.Cursors.No;
-            this.gActionBtColors.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtColors.DisabledForeColor = System.Drawing.Color.Gray;
-            this.gActionBtColors.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtColors.DisabledHoverFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtColors.DisabledHoverForeColor = System.Drawing.Color.Gray;
-            this.gActionBtColors.DisabledImage = null;
-            this.gActionBtColors.EnabledBorderColor = System.Drawing.Color.Black;
-            this.gActionBtColors.EnabledCursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtColors.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtColors.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtColors.EnabledImage = null;
-            this.gActionBtColors.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtColors.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gActionBtColors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtColors.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
-            this.gActionBtColors.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
-            this.gActionBtColors.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtColors.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
-            this.gActionBtColors.HoverState.Parent = this.gActionBtColors;
-            this.gActionBtColors.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.gActionBtColors.ImageSize = new System.Drawing.Size(18, 20);
-            this.gActionBtColors.Location = new System.Drawing.Point(11, 66);
-            this.gActionBtColors.Name = "gActionBtColors";
-            this.gActionBtColors.ShadowDecoration.Parent = this.gActionBtColors;
-            this.gActionBtColors.Size = new System.Drawing.Size(96, 42);
-            this.gActionBtColors.TabIndex = 1;
-            this.gActionBtColors.Text = "Cores";
-            this.gActionBtColors.Click += new System.EventHandler(this.gActionButton7_Click);
-            // 
-            // gActionBtTypes
-            // 
-            this.gActionBtTypes.ActionEnabled = true;
-            this.gActionBtTypes.BorderRadius = 6;
-            this.gActionBtTypes.Checked = true;
-            this.gActionBtTypes.CheckedState.Parent = this.gActionBtTypes;
-            this.gActionBtTypes.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
-            this.gActionBtTypes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtTypes.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.gActionBtTypes.CustomImages.Parent = this.gActionBtTypes;
-            this.gActionBtTypes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtTypes.DisabledCursor = System.Windows.Forms.Cursors.No;
-            this.gActionBtTypes.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtTypes.DisabledForeColor = System.Drawing.Color.Gray;
-            this.gActionBtTypes.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
-            this.gActionBtTypes.DisabledHoverFillColor = System.Drawing.Color.DimGray;
-            this.gActionBtTypes.DisabledHoverForeColor = System.Drawing.Color.Gray;
-            this.gActionBtTypes.DisabledImage = null;
-            this.gActionBtTypes.EnabledBorderColor = System.Drawing.Color.Black;
-            this.gActionBtTypes.EnabledCursor = System.Windows.Forms.Cursors.Hand;
-            this.gActionBtTypes.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtTypes.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtTypes.EnabledImage = null;
-            this.gActionBtTypes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtTypes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gActionBtTypes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
-            this.gActionBtTypes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
-            this.gActionBtTypes.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
-            this.gActionBtTypes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
-            this.gActionBtTypes.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
-            this.gActionBtTypes.HoverState.Parent = this.gActionBtTypes;
-            this.gActionBtTypes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.gActionBtTypes.ImageSize = new System.Drawing.Size(18, 20);
-            this.gActionBtTypes.Location = new System.Drawing.Point(11, 16);
-            this.gActionBtTypes.Name = "gActionBtTypes";
-            this.gActionBtTypes.ShadowDecoration.Parent = this.gActionBtTypes;
-            this.gActionBtTypes.Size = new System.Drawing.Size(96, 42);
-            this.gActionBtTypes.TabIndex = 1;
-            this.gActionBtTypes.Text = "Tipos de Filamento";
+            this.panelAuxTables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
+            this.panelAuxTables.Controls.Add(this.gActionBtPresets);
+            this.panelAuxTables.Controls.Add(this.gActionBtSubCategory);
+            this.panelAuxTables.Controls.Add(this.gActionBtCategory);
+            this.panelAuxTables.Controls.Add(this.gActionBtUnits);
+            this.panelAuxTables.Controls.Add(this.gActionBtColors);
+            this.panelAuxTables.Controls.Add(this.gActionBtTypes);
+            this.panelAuxTables.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelAuxTables.Location = new System.Drawing.Point(0, 0);
+            this.panelAuxTables.Name = "panelAuxTables";
+            this.panelAuxTables.Size = new System.Drawing.Size(121, 410);
+            this.panelAuxTables.TabIndex = 57;
             // 
             // guna2GroupBox4
             // 
@@ -1383,6 +1145,268 @@
             this.panel2.Size = new System.Drawing.Size(121, 45);
             this.panel2.TabIndex = 7;
             // 
+            // guna2HtmlToolTip1
+            // 
+            this.guna2HtmlToolTip1.AllowLinksHandling = true;
+            this.guna2HtmlToolTip1.AutoPopDelay = 5000;
+            this.guna2HtmlToolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.guna2HtmlToolTip1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2HtmlToolTip1.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlToolTip1.InitialDelay = 100;
+            this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
+            this.guna2HtmlToolTip1.ReshowDelay = 100;
+            this.guna2HtmlToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // gActionBtPresets
+            // 
+            this.gActionBtPresets.ActionEnabled = true;
+            this.gActionBtPresets.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtPresets.BorderRadius = 6;
+            this.gActionBtPresets.BorderThickness = 1;
+            this.gActionBtPresets.CheckedState.Parent = this.gActionBtPresets;
+            this.gActionBtPresets.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
+            this.gActionBtPresets.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtPresets.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.gActionBtPresets.CustomImages.Parent = this.gActionBtPresets;
+            this.gActionBtPresets.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtPresets.DisabledCursor = System.Windows.Forms.Cursors.No;
+            this.gActionBtPresets.DisabledFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtPresets.DisabledForeColor = System.Drawing.Color.Gray;
+            this.gActionBtPresets.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtPresets.DisabledHoverFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtPresets.DisabledHoverForeColor = System.Drawing.Color.Gray;
+            this.gActionBtPresets.DisabledImage = null;
+            this.gActionBtPresets.EnabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtPresets.EnabledCursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtPresets.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtPresets.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtPresets.EnabledImage = null;
+            this.gActionBtPresets.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtPresets.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gActionBtPresets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtPresets.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
+            this.gActionBtPresets.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
+            this.gActionBtPresets.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtPresets.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
+            this.gActionBtPresets.HoverState.Parent = this.gActionBtPresets;
+            this.gActionBtPresets.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gActionBtPresets.ImageSize = new System.Drawing.Size(18, 20);
+            this.gActionBtPresets.Location = new System.Drawing.Point(11, 266);
+            this.gActionBtPresets.Name = "gActionBtPresets";
+            this.gActionBtPresets.ShadowDecoration.Parent = this.gActionBtPresets;
+            this.gActionBtPresets.Size = new System.Drawing.Size(96, 42);
+            this.gActionBtPresets.TabIndex = 1;
+            this.gActionBtPresets.Text = "Presets";
+            this.gActionBtPresets.Click += new System.EventHandler(this.gActionButton11_Click);
+            // 
+            // gActionBtSubCategory
+            // 
+            this.gActionBtSubCategory.ActionEnabled = true;
+            this.gActionBtSubCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtSubCategory.BorderRadius = 6;
+            this.gActionBtSubCategory.BorderThickness = 1;
+            this.gActionBtSubCategory.CheckedState.Parent = this.gActionBtSubCategory;
+            this.gActionBtSubCategory.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
+            this.gActionBtSubCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtSubCategory.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.gActionBtSubCategory.CustomImages.Parent = this.gActionBtSubCategory;
+            this.gActionBtSubCategory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtSubCategory.DisabledCursor = System.Windows.Forms.Cursors.No;
+            this.gActionBtSubCategory.DisabledFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtSubCategory.DisabledForeColor = System.Drawing.Color.Gray;
+            this.gActionBtSubCategory.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtSubCategory.DisabledHoverFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtSubCategory.DisabledHoverForeColor = System.Drawing.Color.Gray;
+            this.gActionBtSubCategory.DisabledImage = null;
+            this.gActionBtSubCategory.EnabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtSubCategory.EnabledCursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtSubCategory.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtSubCategory.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtSubCategory.EnabledImage = null;
+            this.gActionBtSubCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtSubCategory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gActionBtSubCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtSubCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
+            this.gActionBtSubCategory.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
+            this.gActionBtSubCategory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtSubCategory.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
+            this.gActionBtSubCategory.HoverState.Parent = this.gActionBtSubCategory;
+            this.gActionBtSubCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gActionBtSubCategory.ImageSize = new System.Drawing.Size(18, 20);
+            this.gActionBtSubCategory.Location = new System.Drawing.Point(11, 216);
+            this.gActionBtSubCategory.Name = "gActionBtSubCategory";
+            this.gActionBtSubCategory.ShadowDecoration.Parent = this.gActionBtSubCategory;
+            this.gActionBtSubCategory.Size = new System.Drawing.Size(96, 42);
+            this.gActionBtSubCategory.TabIndex = 1;
+            this.gActionBtSubCategory.Text = "Subcategorias de Filamentos";
+            // 
+            // gActionBtCategory
+            // 
+            this.gActionBtCategory.ActionEnabled = true;
+            this.gActionBtCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtCategory.BorderRadius = 6;
+            this.gActionBtCategory.BorderThickness = 1;
+            this.gActionBtCategory.CheckedState.Parent = this.gActionBtCategory;
+            this.gActionBtCategory.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
+            this.gActionBtCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtCategory.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.gActionBtCategory.CustomImages.Parent = this.gActionBtCategory;
+            this.gActionBtCategory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtCategory.DisabledCursor = System.Windows.Forms.Cursors.No;
+            this.gActionBtCategory.DisabledFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtCategory.DisabledForeColor = System.Drawing.Color.Gray;
+            this.gActionBtCategory.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtCategory.DisabledHoverFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtCategory.DisabledHoverForeColor = System.Drawing.Color.Gray;
+            this.gActionBtCategory.DisabledImage = null;
+            this.gActionBtCategory.EnabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtCategory.EnabledCursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtCategory.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtCategory.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtCategory.EnabledImage = null;
+            this.gActionBtCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtCategory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gActionBtCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
+            this.gActionBtCategory.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
+            this.gActionBtCategory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtCategory.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
+            this.gActionBtCategory.HoverState.Parent = this.gActionBtCategory;
+            this.gActionBtCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gActionBtCategory.ImageSize = new System.Drawing.Size(18, 20);
+            this.gActionBtCategory.Location = new System.Drawing.Point(11, 166);
+            this.gActionBtCategory.Name = "gActionBtCategory";
+            this.gActionBtCategory.ShadowDecoration.Parent = this.gActionBtCategory;
+            this.gActionBtCategory.Size = new System.Drawing.Size(96, 42);
+            this.gActionBtCategory.TabIndex = 1;
+            this.gActionBtCategory.Text = "Categorias de Filamentos";
+            this.gActionBtCategory.Click += new System.EventHandler(this.gActionButton9_Click);
+            // 
+            // gActionBtUnits
+            // 
+            this.gActionBtUnits.ActionEnabled = true;
+            this.gActionBtUnits.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtUnits.BorderRadius = 6;
+            this.gActionBtUnits.BorderThickness = 1;
+            this.gActionBtUnits.CheckedState.Parent = this.gActionBtUnits;
+            this.gActionBtUnits.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
+            this.gActionBtUnits.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtUnits.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.gActionBtUnits.CustomImages.Parent = this.gActionBtUnits;
+            this.gActionBtUnits.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtUnits.DisabledCursor = System.Windows.Forms.Cursors.No;
+            this.gActionBtUnits.DisabledFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtUnits.DisabledForeColor = System.Drawing.Color.Gray;
+            this.gActionBtUnits.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtUnits.DisabledHoverFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtUnits.DisabledHoverForeColor = System.Drawing.Color.Gray;
+            this.gActionBtUnits.DisabledImage = null;
+            this.gActionBtUnits.EnabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtUnits.EnabledCursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtUnits.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtUnits.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtUnits.EnabledImage = null;
+            this.gActionBtUnits.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtUnits.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gActionBtUnits.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtUnits.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
+            this.gActionBtUnits.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
+            this.gActionBtUnits.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtUnits.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
+            this.gActionBtUnits.HoverState.Parent = this.gActionBtUnits;
+            this.gActionBtUnits.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gActionBtUnits.ImageSize = new System.Drawing.Size(18, 20);
+            this.gActionBtUnits.Location = new System.Drawing.Point(11, 116);
+            this.gActionBtUnits.Name = "gActionBtUnits";
+            this.gActionBtUnits.ShadowDecoration.Parent = this.gActionBtUnits;
+            this.gActionBtUnits.Size = new System.Drawing.Size(96, 42);
+            this.gActionBtUnits.TabIndex = 1;
+            this.gActionBtUnits.Text = "Unidades";
+            // 
+            // gActionBtColors
+            // 
+            this.gActionBtColors.ActionEnabled = true;
+            this.gActionBtColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtColors.BorderRadius = 6;
+            this.gActionBtColors.BorderThickness = 1;
+            this.gActionBtColors.CheckedState.Parent = this.gActionBtColors;
+            this.gActionBtColors.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
+            this.gActionBtColors.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtColors.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.gActionBtColors.CustomImages.Parent = this.gActionBtColors;
+            this.gActionBtColors.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtColors.DisabledCursor = System.Windows.Forms.Cursors.No;
+            this.gActionBtColors.DisabledFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtColors.DisabledForeColor = System.Drawing.Color.Gray;
+            this.gActionBtColors.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtColors.DisabledHoverFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtColors.DisabledHoverForeColor = System.Drawing.Color.Gray;
+            this.gActionBtColors.DisabledImage = null;
+            this.gActionBtColors.EnabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtColors.EnabledCursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtColors.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtColors.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtColors.EnabledImage = null;
+            this.gActionBtColors.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtColors.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gActionBtColors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtColors.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
+            this.gActionBtColors.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
+            this.gActionBtColors.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtColors.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
+            this.gActionBtColors.HoverState.Parent = this.gActionBtColors;
+            this.gActionBtColors.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gActionBtColors.ImageSize = new System.Drawing.Size(18, 20);
+            this.gActionBtColors.Location = new System.Drawing.Point(11, 66);
+            this.gActionBtColors.Name = "gActionBtColors";
+            this.gActionBtColors.ShadowDecoration.Parent = this.gActionBtColors;
+            this.gActionBtColors.Size = new System.Drawing.Size(96, 42);
+            this.gActionBtColors.TabIndex = 1;
+            this.gActionBtColors.Text = "Cores";
+            this.gActionBtColors.Click += new System.EventHandler(this.gActionButton7_Click);
+            // 
+            // gActionBtTypes
+            // 
+            this.gActionBtTypes.ActionEnabled = true;
+            this.gActionBtTypes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtTypes.BorderRadius = 6;
+            this.gActionBtTypes.BorderThickness = 1;
+            this.gActionBtTypes.CheckedState.Parent = this.gActionBtTypes;
+            this.gActionBtTypes.CrudAction = _3DFarmManager.Framework.Crud.CrudAction.Insert;
+            this.gActionBtTypes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtTypes.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.gActionBtTypes.CustomImages.Parent = this.gActionBtTypes;
+            this.gActionBtTypes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtTypes.DisabledCursor = System.Windows.Forms.Cursors.No;
+            this.gActionBtTypes.DisabledFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtTypes.DisabledForeColor = System.Drawing.Color.Gray;
+            this.gActionBtTypes.DisabledHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(89)))));
+            this.gActionBtTypes.DisabledHoverFillColor = System.Drawing.Color.DimGray;
+            this.gActionBtTypes.DisabledHoverForeColor = System.Drawing.Color.Gray;
+            this.gActionBtTypes.DisabledImage = null;
+            this.gActionBtTypes.EnabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.gActionBtTypes.EnabledCursor = System.Windows.Forms.Cursors.Hand;
+            this.gActionBtTypes.EnabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtTypes.EnabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtTypes.EnabledImage = null;
+            this.gActionBtTypes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtTypes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gActionBtTypes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
+            this.gActionBtTypes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(206)))), ((int)(((byte)(188)))));
+            this.gActionBtTypes.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(224)))), ((int)(((byte)(199)))));
+            this.gActionBtTypes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(105)))), ((int)(((byte)(145)))));
+            this.gActionBtTypes.HoverState.ForeColor = System.Drawing.Color.Gainsboro;
+            this.gActionBtTypes.HoverState.Parent = this.gActionBtTypes;
+            this.gActionBtTypes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gActionBtTypes.ImageSize = new System.Drawing.Size(18, 20);
+            this.gActionBtTypes.Location = new System.Drawing.Point(11, 16);
+            this.gActionBtTypes.Name = "gActionBtTypes";
+            this.gActionBtTypes.ShadowDecoration.Parent = this.gActionBtTypes;
+            this.gActionBtTypes.Size = new System.Drawing.Size(96, 42);
+            this.gActionBtTypes.TabIndex = 1;
+            this.gActionBtTypes.Text = "Tipos de Filamento";
+            this.gActionBtTypes.Click += new System.EventHandler(this.gActionBtTypes_Click);
+            // 
             // gActionBtDelete
             // 
             this.gActionBtDelete.ActionEnabled = true;
@@ -1642,18 +1666,6 @@
             this.guna2HtmlToolTip1.SetToolTip(this.gActionBtAdd, "Adicionar Filamento");
             this.gActionBtAdd.Click += new System.EventHandler(this.gActionBtAdd_Click);
             // 
-            // guna2HtmlToolTip1
-            // 
-            this.guna2HtmlToolTip1.AllowLinksHandling = true;
-            this.guna2HtmlToolTip1.AutoPopDelay = 5000;
-            this.guna2HtmlToolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.guna2HtmlToolTip1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2HtmlToolTip1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlToolTip1.InitialDelay = 100;
-            this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
-            this.guna2HtmlToolTip1.ReshowDelay = 100;
-            this.guna2HtmlToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
             // UC_Filaments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1673,7 +1685,7 @@
             this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictUCTitle)).EndInit();
             this.panelData.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panelAuxTables.ResumeLayout(false);
             this.guna2GroupBox4.ResumeLayout(false);
             this.guna2GroupBox4.PerformLayout();
             this.guna2GroupBox3.ResumeLayout(false);
@@ -1743,7 +1755,7 @@
         private Guna.UI2.WinForms.Guna2Chip gchipRecLog;
         private Guna.UI2.WinForms.Guna2Chip gchipTitle;
         private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelAuxTables;
         private Framework.Controls.GActionButton gActionBtTypes;
         private Framework.Controls.GActionButton gActionBtPresets;
         private Framework.Controls.GActionButton gActionBtSubCategory;

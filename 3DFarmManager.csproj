@@ -243,6 +243,7 @@
     <Compile Include="Services\ColorCacheService.cs" />
     <Compile Include="Services\ExpensesFixedCacheService.cs" />
     <Compile Include="Services\FilamentCacheService.cs" />
+    <Compile Include="Services\FilamentTypeCacheService.cs" />
     <Compile Include="UserControls\UC_Expenses.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -311,12 +312,19 @@
     </Compile>
     <Compile Include="Validators\ColorValidator.cs" />
     <Compile Include="Validators\ExpensesFixedValidator.cs" />
+    <Compile Include="Validators\FilamentTypeValidator.cs" />
     <Compile Include="Validators\FilamentValidator.cs" />
     <Compile Include="Views\formColors.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\formColors.Designer.cs">
       <DependentUpon>formColors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\formFilamentTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\formFilamentTypes.Designer.cs">
+      <DependentUpon>formFilamentTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\formMain.cs">
       <SubType>Form</SubType>
@@ -423,6 +431,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\formColors.resx">
       <DependentUpon>formColors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formFilamentTypes.resx">
+      <DependentUpon>formFilamentTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>

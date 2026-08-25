@@ -1,6 +1,6 @@
-﻿namespace _3DFarmManager
+﻿namespace _3DFarmManager.Views
 {
-    partial class formColors
+    partial class formFilamentTypes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.gbtExit = new Guna.UI2.WinForms.Guna2Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDataGrid = new System.Windows.Forms.Panel();
             this.gDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -40,21 +40,15 @@
             this.gchipRecLog = new Guna.UI2.WinForms.Guna2Chip();
             this.gchipTitle = new Guna.UI2.WinForms.Guna2Chip();
             this.panelActions = new System.Windows.Forms.Panel();
-            this.panelData = new System.Windows.Forms.Panel();
-            this.gtbRgbCode = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.gtbName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.gtbHexCode = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbPrinterName = new System.Windows.Forms.Label();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.gActionBtRefresh = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtDelete = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtEdit = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtCancel = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtSave = new _3DFarmManager.Framework.Controls.GActionButton();
             this.gActionBtAdd = new _3DFarmManager.Framework.Controls.GActionButton();
-            this.gbtExit = new Guna.UI2.WinForms.Guna2Button();
+            this.panelData = new System.Windows.Forms.Panel();
+            this.gtbName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbPrinterName = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
             this.panelDataGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gDataGridView)).BeginInit();
@@ -72,7 +66,27 @@
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(766, 35);
-            this.panelTitle.TabIndex = 0;
+            this.panelTitle.TabIndex = 1;
+            // 
+            // gbtExit
+            // 
+            this.gbtExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbtExit.BackColor = System.Drawing.Color.Transparent;
+            this.gbtExit.CheckedState.Parent = this.gbtExit;
+            this.gbtExit.CustomImages.Parent = this.gbtExit;
+            this.gbtExit.FillColor = System.Drawing.Color.Transparent;
+            this.gbtExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gbtExit.ForeColor = System.Drawing.Color.White;
+            this.gbtExit.HoverState.BorderColor = System.Drawing.Color.White;
+            this.gbtExit.HoverState.Image = global::_3DFarmManager.Properties.Resources.CloseBold;
+            this.gbtExit.HoverState.Parent = this.gbtExit;
+            this.gbtExit.Image = global::_3DFarmManager.Properties.Resources.Close;
+            this.gbtExit.Location = new System.Drawing.Point(735, 6);
+            this.gbtExit.Name = "gbtExit";
+            this.gbtExit.ShadowDecoration.Parent = this.gbtExit;
+            this.gbtExit.Size = new System.Drawing.Size(23, 22);
+            this.gbtExit.TabIndex = 1;
+            this.gbtExit.Click += new System.EventHandler(this.gbtExit_Click);
             // 
             // lblTitle
             // 
@@ -81,9 +95,9 @@
             this.lblTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblTitle.Location = new System.Drawing.Point(12, 3);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(60, 25);
+            this.lblTitle.Size = new System.Drawing.Size(182, 25);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Cores";
+            this.lblTitle.Text = "Tipos de Filamentos";
             // 
             // panelDataGrid
             // 
@@ -93,35 +107,35 @@
             this.panelDataGrid.Location = new System.Drawing.Point(0, 35);
             this.panelDataGrid.Name = "panelDataGrid";
             this.panelDataGrid.Size = new System.Drawing.Size(766, 271);
-            this.panelDataGrid.TabIndex = 1;
+            this.panelDataGrid.TabIndex = 2;
             // 
             // gDataGridView
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(157)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.gDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(157)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.gDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.gDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(184)))), ((int)(((byte)(179)))));
             this.gDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.gDataGridView.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(184)))), ((int)(((byte)(179)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(104)))), ((int)(((byte)(95)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(184)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(104)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gDataGridView.DefaultCellStyle = dataGridViewCellStyle18;
             this.gDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gDataGridView.EnableHeadersVisualStyles = false;
             this.gDataGridView.GridColor = System.Drawing.Color.LightSlateGray;
@@ -131,7 +145,7 @@
             this.gDataGridView.RowHeadersVisible = false;
             this.gDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gDataGridView.Size = new System.Drawing.Size(766, 271);
-            this.gDataGridView.TabIndex = 10;
+            this.gDataGridView.TabIndex = 11;
             this.gDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.gDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(157)))), ((int)(((byte)(153)))));
             this.gDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -166,7 +180,7 @@
             this.panelRecInfo.Location = new System.Drawing.Point(0, 306);
             this.panelRecInfo.Name = "panelRecInfo";
             this.panelRecInfo.Size = new System.Drawing.Size(766, 32);
-            this.panelRecInfo.TabIndex = 2;
+            this.panelRecInfo.TabIndex = 3;
             // 
             // gchipRecLog
             // 
@@ -215,149 +229,7 @@
             this.panelActions.Location = new System.Drawing.Point(0, 338);
             this.panelActions.Name = "panelActions";
             this.panelActions.Size = new System.Drawing.Size(766, 45);
-            this.panelActions.TabIndex = 3;
-            // 
-            // panelData
-            // 
-            this.panelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(59)))));
-            this.panelData.Controls.Add(this.gtbRgbCode);
-            this.panelData.Controls.Add(this.label2);
-            this.panelData.Controls.Add(this.gtbName);
-            this.panelData.Controls.Add(this.gtbHexCode);
-            this.panelData.Controls.Add(this.label1);
-            this.panelData.Controls.Add(this.lbPrinterName);
-            this.panelData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelData.Location = new System.Drawing.Point(0, 383);
-            this.panelData.Name = "panelData";
-            this.panelData.Size = new System.Drawing.Size(766, 100);
-            this.panelData.TabIndex = 4;
-            // 
-            // gtbRgbCode
-            // 
-            this.gtbRgbCode.BackColor = System.Drawing.Color.Transparent;
-            this.gtbRgbCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(120)))), ((int)(((byte)(116)))));
-            this.gtbRgbCode.BorderRadius = 5;
-            this.gtbRgbCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtbRgbCode.DefaultText = "";
-            this.gtbRgbCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.gtbRgbCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.gtbRgbCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gtbRgbCode.DisabledState.Parent = this.gtbRgbCode;
-            this.gtbRgbCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gtbRgbCode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
-            this.gtbRgbCode.FocusedState.BorderColor = System.Drawing.Color.SteelBlue;
-            this.gtbRgbCode.FocusedState.Parent = this.gtbRgbCode;
-            this.gtbRgbCode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtbRgbCode.ForeColor = System.Drawing.Color.White;
-            this.gtbRgbCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(162)))), ((int)(((byte)(157)))));
-            this.gtbRgbCode.HoverState.Parent = this.gtbRgbCode;
-            this.gtbRgbCode.Location = new System.Drawing.Point(578, 36);
-            this.gtbRgbCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gtbRgbCode.Name = "gtbRgbCode";
-            this.gtbRgbCode.PasswordChar = '\0';
-            this.gtbRgbCode.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.gtbRgbCode.PlaceholderText = "";
-            this.gtbRgbCode.SelectedText = "";
-            this.gtbRgbCode.ShadowDecoration.Parent = this.gtbRgbCode;
-            this.gtbRgbCode.Size = new System.Drawing.Size(175, 36);
-            this.gtbRgbCode.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(575, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "RGB";
-            // 
-            // gtbName
-            // 
-            this.gtbName.BackColor = System.Drawing.Color.Transparent;
-            this.gtbName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(120)))), ((int)(((byte)(116)))));
-            this.gtbName.BorderRadius = 5;
-            this.gtbName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtbName.DefaultText = "";
-            this.gtbName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.gtbName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.gtbName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gtbName.DisabledState.Parent = this.gtbName;
-            this.gtbName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gtbName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
-            this.gtbName.FocusedState.BorderColor = System.Drawing.Color.SteelBlue;
-            this.gtbName.FocusedState.Parent = this.gtbName;
-            this.gtbName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtbName.ForeColor = System.Drawing.Color.White;
-            this.gtbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(162)))), ((int)(((byte)(157)))));
-            this.gtbName.HoverState.Parent = this.gtbName;
-            this.gtbName.Location = new System.Drawing.Point(13, 36);
-            this.gtbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gtbName.Name = "gtbName";
-            this.gtbName.PasswordChar = '\0';
-            this.gtbName.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.gtbName.PlaceholderText = "";
-            this.gtbName.SelectedText = "";
-            this.gtbName.ShadowDecoration.Parent = this.gtbName;
-            this.gtbName.Size = new System.Drawing.Size(370, 36);
-            this.gtbName.TabIndex = 7;
-            // 
-            // gtbHexCode
-            // 
-            this.gtbHexCode.BackColor = System.Drawing.Color.Transparent;
-            this.gtbHexCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(120)))), ((int)(((byte)(116)))));
-            this.gtbHexCode.BorderRadius = 5;
-            this.gtbHexCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtbHexCode.DefaultText = "";
-            this.gtbHexCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.gtbHexCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.gtbHexCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gtbHexCode.DisabledState.Parent = this.gtbHexCode;
-            this.gtbHexCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gtbHexCode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
-            this.gtbHexCode.FocusedState.BorderColor = System.Drawing.Color.SteelBlue;
-            this.gtbHexCode.FocusedState.Parent = this.gtbHexCode;
-            this.gtbHexCode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtbHexCode.ForeColor = System.Drawing.Color.White;
-            this.gtbHexCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(162)))), ((int)(((byte)(157)))));
-            this.gtbHexCode.HoverState.Parent = this.gtbHexCode;
-            this.gtbHexCode.Location = new System.Drawing.Point(393, 36);
-            this.gtbHexCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gtbHexCode.Name = "gtbHexCode";
-            this.gtbHexCode.PasswordChar = '\0';
-            this.gtbHexCode.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.gtbHexCode.PlaceholderText = "";
-            this.gtbHexCode.SelectedText = "";
-            this.gtbHexCode.ShadowDecoration.Parent = this.gtbHexCode;
-            this.gtbHexCode.Size = new System.Drawing.Size(175, 36);
-            this.gtbHexCode.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(390, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Código Hex";
-            // 
-            // lbPrinterName
-            // 
-            this.lbPrinterName.AutoSize = true;
-            this.lbPrinterName.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrinterName.ForeColor = System.Drawing.Color.LightGray;
-            this.lbPrinterName.Location = new System.Drawing.Point(10, 18);
-            this.lbPrinterName.Name = "lbPrinterName";
-            this.lbPrinterName.Size = new System.Drawing.Size(46, 13);
-            this.lbPrinterName.TabIndex = 8;
-            this.lbPrinterName.Text = "Nome *";
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.TargetControl = this.panelTitle;
+            this.panelActions.TabIndex = 4;
             // 
             // gActionBtRefresh
             // 
@@ -612,27 +484,59 @@
             this.gActionBtAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.gActionBtAdd.Click += new System.EventHandler(this.gActionBtAdd_Click);
             // 
-            // gbtExit
+            // panelData
             // 
-            this.gbtExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbtExit.BackColor = System.Drawing.Color.Transparent;
-            this.gbtExit.CheckedState.Parent = this.gbtExit;
-            this.gbtExit.CustomImages.Parent = this.gbtExit;
-            this.gbtExit.FillColor = System.Drawing.Color.Transparent;
-            this.gbtExit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gbtExit.ForeColor = System.Drawing.Color.White;
-            this.gbtExit.HoverState.BorderColor = System.Drawing.Color.White;
-            this.gbtExit.HoverState.Image = global::_3DFarmManager.Properties.Resources.CloseBold;
-            this.gbtExit.HoverState.Parent = this.gbtExit;
-            this.gbtExit.Image = global::_3DFarmManager.Properties.Resources.Close;
-            this.gbtExit.Location = new System.Drawing.Point(735, 6);
-            this.gbtExit.Name = "gbtExit";
-            this.gbtExit.ShadowDecoration.Parent = this.gbtExit;
-            this.gbtExit.Size = new System.Drawing.Size(23, 22);
-            this.gbtExit.TabIndex = 1;
-            this.gbtExit.Click += new System.EventHandler(this.gbtExit_Click);
+            this.panelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(59)))));
+            this.panelData.Controls.Add(this.gtbName);
+            this.panelData.Controls.Add(this.lbPrinterName);
+            this.panelData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelData.Location = new System.Drawing.Point(0, 383);
+            this.panelData.Name = "panelData";
+            this.panelData.Size = new System.Drawing.Size(766, 100);
+            this.panelData.TabIndex = 5;
             // 
-            // formColors
+            // gtbName
+            // 
+            this.gtbName.BackColor = System.Drawing.Color.Transparent;
+            this.gtbName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(120)))), ((int)(((byte)(116)))));
+            this.gtbName.BorderRadius = 5;
+            this.gtbName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtbName.DefaultText = "";
+            this.gtbName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.gtbName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.gtbName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gtbName.DisabledState.Parent = this.gtbName;
+            this.gtbName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gtbName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
+            this.gtbName.FocusedState.BorderColor = System.Drawing.Color.SteelBlue;
+            this.gtbName.FocusedState.Parent = this.gtbName;
+            this.gtbName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gtbName.ForeColor = System.Drawing.Color.White;
+            this.gtbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(162)))), ((int)(((byte)(157)))));
+            this.gtbName.HoverState.Parent = this.gtbName;
+            this.gtbName.Location = new System.Drawing.Point(13, 36);
+            this.gtbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gtbName.Name = "gtbName";
+            this.gtbName.PasswordChar = '\0';
+            this.gtbName.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.gtbName.PlaceholderText = "";
+            this.gtbName.SelectedText = "";
+            this.gtbName.ShadowDecoration.Parent = this.gtbName;
+            this.gtbName.Size = new System.Drawing.Size(370, 36);
+            this.gtbName.TabIndex = 7;
+            // 
+            // lbPrinterName
+            // 
+            this.lbPrinterName.AutoSize = true;
+            this.lbPrinterName.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrinterName.ForeColor = System.Drawing.Color.LightGray;
+            this.lbPrinterName.Location = new System.Drawing.Point(10, 18);
+            this.lbPrinterName.Name = "lbPrinterName";
+            this.lbPrinterName.Size = new System.Drawing.Size(46, 13);
+            this.lbPrinterName.TabIndex = 8;
+            this.lbPrinterName.Text = "Nome *";
+            // 
+            // formFilamentTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -644,7 +548,7 @@
             this.Controls.Add(this.panelDataGrid);
             this.Controls.Add(this.panelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "formColors";
+            this.Name = "formFilamentTypes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
@@ -659,28 +563,24 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelActions;
-        private System.Windows.Forms.Panel panelRecInfo;
-        private System.Windows.Forms.Panel panelDataGrid;
+
         private System.Windows.Forms.Panel panelTitle;
-        private System.Windows.Forms.Panel panelData;
+        public Guna.UI2.WinForms.Guna2Button gbtExit;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel panelDataGrid;
+        private System.Windows.Forms.Panel panelRecInfo;
         private Guna.UI2.WinForms.Guna2Chip gchipRecLog;
         private Guna.UI2.WinForms.Guna2Chip gchipTitle;
+        private System.Windows.Forms.Panel panelActions;
+        private Framework.Controls.GActionButton gActionBtRefresh;
         private Framework.Controls.GActionButton gActionBtDelete;
         private Framework.Controls.GActionButton gActionBtEdit;
         private Framework.Controls.GActionButton gActionBtCancel;
         private Framework.Controls.GActionButton gActionBtSave;
         private Framework.Controls.GActionButton gActionBtAdd;
-        private Framework.Controls.GActionButton gActionBtRefresh;
-        private System.Windows.Forms.Label lbPrinterName;
-        private Guna.UI2.WinForms.Guna2TextBox gtbRgbCode;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox gtbHexCode;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblTitle;
-        public Guna.UI2.WinForms.Guna2Button gbtExit;
+        private System.Windows.Forms.Panel panelData;
         private Guna.UI2.WinForms.Guna2TextBox gtbName;
+        private System.Windows.Forms.Label lbPrinterName;
         private Guna.UI2.WinForms.Guna2DataGridView gDataGridView;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

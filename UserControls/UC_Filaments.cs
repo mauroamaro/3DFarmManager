@@ -12,6 +12,7 @@ using _3DFarmManager.Models;
 using _3DFarmManager.Repositories;
 using _3DFarmManager.Services;
 using _3DFarmManager.Validators;
+using _3DFarmManager.Views;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -184,7 +185,9 @@ namespace _3DFarmManager.UserControls
 
             ApplyViewState(state);
 
-            _buttonManager.Apply(state);
+            //_buttonManager.Apply(state);
+
+            ConfigureAuxiliaryButtons(_controller.Mode);
         }
         private void ApplyViewState(CrudViewState state)
         {
@@ -849,6 +852,20 @@ namespace _3DFarmManager.UserControls
             }
         }
 
+        private void ConfigureAuxiliaryButtons(CrudMode mode)
+        {
+            bool enabled =
+                mode != CrudMode.Create &&
+                mode != CrudMode.Edit;
+
+            gActionBtTypes.ActionEnabled = enabled;
+            gActionBtColors.ActionEnabled = enabled;
+            gActionBtUnits.ActionEnabled = enabled;
+            gActionBtCategory.ActionEnabled = enabled;
+            gActionBtSubCategory.ActionEnabled = enabled;
+            gActionBtPresets.ActionEnabled = enabled;
+        }
+
         private void SetActionMode(CrudMode mode)
         {
             ConfigureEditors(mode);
@@ -1022,6 +1039,7 @@ namespace _3DFarmManager.UserControls
 
         private void gActionBtEdit_Click(object sender, EventArgs e)
         {
+            
             BeginEdit();
         }
 
@@ -1186,8 +1204,18 @@ namespace _3DFarmManager.UserControls
 
         private void gActionButton7_Click(object sender, EventArgs e)
         {
+            gActionBtColors.Checked = true;
             formColors frm = new formColors();
             frm.ShowDialog();
+            gActionBtColors.Checked = false;
+        }
+
+        private void gActionBtTypes_Click(object sender, EventArgs e)
+        {
+            gActionBtTypes.Checked = true;
+            formFilamentTypes frm = new formFilamentTypes();
+            frm.ShowDialog();
+            gActionBtTypes.Checked = false;
         }
     }
 

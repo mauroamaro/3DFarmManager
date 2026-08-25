@@ -29,6 +29,11 @@ namespace _3DFarmManager.Validators
 
         public static bool ColorHexCodeValidator(string cor)
         {
+            if (string.IsNullOrWhiteSpace(cor))
+            { 
+                return true;
+            }
+
             // Padrão aceita #RGB, #RRGGBB, RGB ou RRGGBB
             string padrao = @"^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$";
 
@@ -40,7 +45,7 @@ namespace _3DFarmManager.Validators
             // 1. Verifica se a string está vazia
             if (string.IsNullOrWhiteSpace(cor))
             {
-                return false;
+                return true;
             }
 
             // 2. Divide o texto nos pontos e vírgulas

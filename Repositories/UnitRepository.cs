@@ -48,7 +48,7 @@ namespace _3DFarmManager.Repositories
                         SELECT
                             u.id,
                             u.name,
-                            u.shortname AS ShortName,
+                            u.shortname AS ShortName 
                         FROM tb_unit u
                         WHERE u.logcrudtype <> '3'
                         ORDER BY u.id";
@@ -124,7 +124,7 @@ namespace _3DFarmManager.Repositories
         public async Task DeleteAsync(long id, long userId)
         {
             string sql = @"
-                        UPDATE tb_filamentsubcategory
+                        UPDATE tb_unit
                         SET
                             logcrudtype = '3',
                             logcruddate = NOW(),

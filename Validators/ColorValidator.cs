@@ -1,11 +1,6 @@
-﻿using _3DFarmManager.Model;
-using _3DFarmManager.Models;
-using System;
+﻿using _3DFarmManager.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace _3DFarmManager.Validators
 {

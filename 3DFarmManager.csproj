@@ -243,7 +243,9 @@
     <Compile Include="Services\ColorCacheService.cs" />
     <Compile Include="Services\ExpensesFixedCacheService.cs" />
     <Compile Include="Services\FilamentCacheService.cs" />
+    <Compile Include="Services\FilamentCategoryCacheService.cs" />
     <Compile Include="Services\FilamentTypeCacheService.cs" />
+    <Compile Include="Services\UnitCacheService.cs" />
     <Compile Include="UserControls\UC_Expenses.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -312,8 +314,10 @@
     </Compile>
     <Compile Include="Validators\ColorValidator.cs" />
     <Compile Include="Validators\ExpensesFixedValidator.cs" />
+    <Compile Include="Validators\FilamentCategoryValidator.cs" />
     <Compile Include="Validators\FilamentTypeValidator.cs" />
     <Compile Include="Validators\FilamentValidator.cs" />
+    <Compile Include="Validators\UnitValidator.cs" />
     <Compile Include="Views\formColors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,11 +336,11 @@
     <Compile Include="Views\formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\formMaterialTypes.cs">
+    <Compile Include="Views\formFilamentCategories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\formMaterialTypes.Designer.cs">
-      <DependentUpon>formMaterialTypes.cs</DependentUpon>
+    <Compile Include="Views\formFilamentCategories.Designer.cs">
+      <DependentUpon>formFilamentCategories.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\formUnits.cs">
       <SubType>Form</SubType>
@@ -432,11 +436,17 @@
     <EmbeddedResource Include="Views\formColors.resx">
       <DependentUpon>formColors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\formFilamentCategories.resx">
+      <DependentUpon>formFilamentCategories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\formFilamentTypes.resx">
       <DependentUpon>formFilamentTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formUnits.resx">
+      <DependentUpon>formUnits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MsgBox.resx">
       <DependentUpon>MsgBox.cs</DependentUpon>
@@ -485,6 +495,10 @@
     <Content Include="Docs\ChatGPT_13.06.26.txt" />
     <Content Include="Docs\Dicionario de Dados.txt" />
     <Content Include="Docs\SQL.txt" />
+    <None Include="Resources\icons8-information-30_OUTLINE_WHITE.png" />
+    <None Include="Resources\icons8-success-30_OUTLINE_WHITE.png" />
+    <None Include="Resources\icons8-radioactive-30_OUTLINE_WHITE.png" />
+    <None Include="Resources\icons8-alert-30_OUTLINE_WHITE.png" />
     <None Include="Resources\icons8-down-right-30.png" />
     <None Include="Resources\icons8-play-30.png" />
     <None Include="Resources\icons8-refresh-30_ORANGE_DARK.png" />

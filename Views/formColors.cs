@@ -5,20 +5,15 @@ using _3DFarmManager.Framework.Crud;
 using _3DFarmManager.Framework.Models.Base;
 using _3DFarmManager.Framework.Navigation;
 using _3DFarmManager.Framework.Services;
-using _3DFarmManager.Model;
 using _3DFarmManager.Models;
 using _3DFarmManager.Repositories;
 using _3DFarmManager.Services;
 using _3DFarmManager.Validators;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace _3DFarmManager

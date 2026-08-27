@@ -1192,16 +1192,6 @@ namespace _3DFarmManager.UserControls
             LoadPresetValues();
         }
 
-        private void gActionButton9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gActionButton11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void gActionButton7_Click(object sender, EventArgs e)
         {
             gActionBtColors.Checked = true;
@@ -1216,6 +1206,38 @@ namespace _3DFarmManager.UserControls
             formFilamentTypes frm = new formFilamentTypes();
             frm.ShowDialog();
             gActionBtTypes.Checked = false;
+        }
+
+        private void gActionBtUnits_Click(object sender, EventArgs e)
+        {
+            gActionBtUnits.Checked = true;
+            formUnits frm = new formUnits();
+            frm.ShowDialog();
+            gActionBtUnits.Checked = false;
+        }
+
+        private void gActionBtCategory_Click(object sender, EventArgs e)
+        {
+            gActionBtCategory.Checked = true;
+            formFilamentCategories frm = new formFilamentCategories();
+            frm.ShowDialog();
+            gActionBtCategory.Checked = false;
+        }
+
+        private void gActionBtSubCategory_Click(object sender, EventArgs e)
+        {
+            gActionBtSubCategory.Checked = true;
+            //formFilamentSubCategories frm = new formFilamentSubCategories();
+            //frm.ShowDialog();
+            gActionBtSubCategory.Checked = false;
+        }
+
+        private void gActionBtPresets_Click(object sender, EventArgs e)
+        {
+            gActionBtPresets.Checked = true;
+            //formFilamentPresets frm = new formFilamentPresets();
+            //frm.ShowDialog();
+            gActionBtPresets.Checked = false;
         }
     }
 

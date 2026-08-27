@@ -403,6 +403,16 @@ namespace _3DFarmManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_alert_30_OUTLINE_WHITE {
+            get {
+                object obj = ResourceManager.GetObject("icons8-alert-30_OUTLINE_WHITE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_alert_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-alert-64", resourceCulture);
@@ -833,6 +843,16 @@ namespace _3DFarmManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_information_30_OUTLINE_WHITE {
+            get {
+                object obj = ResourceManager.GetObject("icons8-information-30_OUTLINE_WHITE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_information_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-information-64", resourceCulture);
@@ -1083,6 +1103,16 @@ namespace _3DFarmManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_radioactive_30_OUTLINE_WHITE {
+            get {
+                object obj = ResourceManager.GetObject("icons8-radioactive-30_OUTLINE_WHITE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_radioactive_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-radioactive-64", resourceCulture);
@@ -1186,6 +1216,16 @@ namespace _3DFarmManager.Properties {
         internal static System.Drawing.Bitmap icons8_store_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-store-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_success_30_OUTLINE_WHITE {
+            get {
+                object obj = ResourceManager.GetObject("icons8-success-30_OUTLINE_WHITE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

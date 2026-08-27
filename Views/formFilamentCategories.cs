@@ -18,19 +18,19 @@ using System.Windows.Forms;
 
 namespace _3DFarmManager
 {
-    public partial class formUnits : Form
+    public partial class formFilamentCategories : Form
     {
         #region Infrastructure
 
-        private UnitRepository _repository;
+        private FilamentCategoryRepository _repository;
 
-        private UnitCacheService _cache;
+        private FilamentCategoryCacheService _cache;
 
-        private CrudController<UnitModel> _controller;
+        private CrudController<FilamentCategoryModel> _controller;
 
-        private DataGridViewAdapter<UnitGridModel> _gridAdapter;
+        private DataGridViewAdapter<FilamentCategoryGridModel> _gridAdapter;
 
-        private CrudNavigator<UnitGridModel> _navigator;
+        private CrudNavigator<FilamentCategoryGridModel> _navigator;
 
         private CrudButtonManager _buttonManager;
 
@@ -66,7 +66,7 @@ namespace _3DFarmManager
 
         #region Constructor
 
-        public formUnits()
+        public formFilamentCategories()
         {
             InitializeComponent();
 
@@ -85,15 +85,14 @@ namespace _3DFarmManager
 
         private void InitializeFramework()
         {
-            _repository = new UnitRepository(GlobalVar.AppConnString);
+            _repository = new FilamentCategoryRepository(GlobalVar.AppConnString);
 
-            _cache = new UnitCacheService();
+            _cache = new FilamentCategoryCacheService();
 
-            _controller = new CrudController<UnitModel>(_repository, _cache);
+            _controller = new CrudController<FilamentCategoryModel>(_repository, _cache);
+            _gridAdapter = new DataGridViewAdapter<FilamentCategoryGridModel>(gDataGridView);
 
-            _gridAdapter = new DataGridViewAdapter<UnitGridModel>(gDataGridView);
-
-            _navigator = new CrudNavigator<UnitGridModel>(_gridAdapter);
+            _navigator = new CrudNavigator<FilamentCategoryGridModel>(_gridAdapter);
 
             _buttonManager = new CrudButtonManager(this);
         }
@@ -154,17 +153,16 @@ namespace _3DFarmManager
 
         #region View
 
-        private UnitModel ReadModel()
+        private FilamentCategoryModel ReadModel()
         {
-            UnitModel model = _controller.Current ?? new UnitModel();
+            FilamentCategoryModel model = _controller.Current ?? new FilamentCategoryModel();
 
             model.Name = gtbName.Text.Trim();
-            model.ShortName = gtbShortName.Text.Trim();
 
             return model;
         }
 
-        private void FillModel(UnitModel model)
+        private void FillModel(FilamentCategoryModel model)
         {
             if (model == null)
             {
@@ -173,7 +171,6 @@ namespace _3DFarmManager
             }
 
             gtbName.Text = model.Name;
-            gtbShortName.Text = model.ShortName;
             gchipRecLog.Text = BuildAuditText(model);
 
         }
@@ -181,11 +178,10 @@ namespace _3DFarmManager
         private void ClearView()
         {
             gtbName.Clear();
-            gtbShortName.Clear();
             gchipRecLog.Text = string.Empty;
         }
 
-        private static string BuildAuditText(UnitModel model)
+        private static string BuildAuditText(FilamentCategoryModel model)
         {
             if (model == null)
                 return String.Empty;
@@ -234,14 +230,6 @@ namespace _3DFarmManager
                 Width = 150
             });
 
-            dgv.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = "shortname",
-                HeaderText = "Sigla",
-                DataPropertyName = "ShortName",
-                Width = 150
-            });
-
             foreach (DataGridViewColumn col in dgv.Columns)
             {
                 col.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
@@ -253,7 +241,7 @@ namespace _3DFarmManager
         {
             _controller.RefreshCache();
 
-            IList<UnitGridModel> items = await _repository.GetGridDataAsync();
+            IList<FilamentCategoryGridModel> items = await _repository.GetGridDataAsync();
 
             _gridAdapter.Load(items);
 
@@ -317,7 +305,7 @@ namespace _3DFarmManager
 
         private async Task LoadCurrentAsync(long id)
         {
-            UnitModel model = await _controller.LoadAsync(id);
+            FilamentCategoryModel model = await _controller.LoadAsync(id);
 
             if (model == null)
             {
@@ -358,9 +346,9 @@ namespace _3DFarmManager
 
         private async Task SaveAsync()
         {
-            UnitModel model = ReadModel();
+            FilamentCategoryModel model = ReadModel();
 
-            List<string> errors = UnitValidator.Validate(model);
+            List<string> errors = FilamentCategoryValidator.Validate(model);
 
             if (errors.Any())
             {
@@ -455,7 +443,6 @@ namespace _3DFarmManager
                 mode == CrudMode.Empty;
 
             gtbName.ReadOnly = readOnly;
-            gtbShortName.ReadOnly = readOnly;
         }
 
         private void ConfigureFocus(CrudMode mode)
@@ -488,10 +475,6 @@ namespace _3DFarmManager
                     gtbName.BorderColor = _readOnlyTrueBorderColor;
                     gtbName.ForeColor = _readOnlyTrueForeColor;
                     gtbName.PlaceholderForeColor = _readOnlyTruePlaceHolderForeColor;
-                    gtbShortName.FillColor = _readOnlyTrueFillColor;
-                    gtbShortName.BorderColor = _readOnlyTrueBorderColor;
-                    gtbShortName.ForeColor = _readOnlyTrueForeColor;
-                    gtbShortName.PlaceholderForeColor = _readOnlyTruePlaceHolderForeColor;
 
                     break;
                 case CrudMode.Edit:
@@ -499,10 +482,6 @@ namespace _3DFarmManager
                     gtbName.BorderColor = _editBorderColor;
                     gtbName.ForeColor = _editForeColor;
                     gtbName.PlaceholderForeColor = _editPlaceHolderForeColor;
-                    gtbShortName.FillColor = _editFillColor;
-                    gtbShortName.BorderColor = _editBorderColor;
-                    gtbShortName.ForeColor = _editForeColor;
-                    gtbShortName.PlaceholderForeColor = _editPlaceHolderForeColor;
 
                     break;
             }
@@ -517,6 +496,7 @@ namespace _3DFarmManager
         {
             return DialogService.Confirm("Deseja realmente cancelar as alterações?");
         }
+
 
         #endregion
 

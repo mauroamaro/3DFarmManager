@@ -1,24 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 using System.Windows.Forms;
 
 namespace _3DFarmManager
 {
     public partial class MsgBox : Form
     {
-        private Color _danger = Color.FromArgb(246, 99, 88); // Red color for danger
-        private Color _warning = Color.FromArgb(255, 169, 43); // Yellow color for warning
-        private Color _success = Color.FromArgb(46, 184, 134); // Green color for success
-        private Color _info = Color.FromArgb(70, 167, 245); // Blue color for info
+        private Color _danger = Color.FromArgb(198, 0, 0); // Red color for danger
+        private Color _warning = Color.FromArgb(219, 116, 116); // Yellow color for warning
+        private Color _success = Color.FromArgb(31, 127, 32); // Green color for success
+        private Color _info = Color.FromArgb(43, 104, 150); // Blue color for info
 
-        public MsgBox(string message, string type, string options)
+        public MsgBox(string message, string type, string options, string title="")
         {
             InitializeComponent();
 
@@ -26,28 +19,28 @@ namespace _3DFarmManager
             {
                 case "danger":
                     panelTitle.BackColor = _danger; // Set the title panel color to danger
-                    lbTitle.Text = "ATENÇÃO";
-                    gpictTitle.Image = Properties.Resources.icons8_radioactive_64;
+                    lbTitle.Text = string.IsNullOrEmpty(title) ? "ATENÇÃO" : title;
+                    gpictTitle.Image = Properties.Resources.icons8_radioactive_30_OUTLINE_WHITE;
                     break;
                 case "warning":
                     panelTitle.BackColor = _warning; // Set the title panel color to warning
-                    lbTitle.Text = "AVISO";
-                    gpictTitle.Image = Properties.Resources.icons8_alert_64;
+                    lbTitle.Text = string.IsNullOrEmpty(title) ? "AVISO" : title;
+                    gpictTitle.Image = Properties.Resources.icons8_alert_30_OUTLINE_WHITE;
                     break;
                 case "success":
                     panelTitle.BackColor = _success; // Set the title panel color to success
-                    lbTitle.Text = "OPERAÇÃO REALIZADA";
-                    gpictTitle.Image = Properties.Resources.icons8_success_64;
+                    lbTitle.Text = string.IsNullOrEmpty(title) ? "OPERAÇÃO REALIZADA" : title;
+                    gpictTitle.Image = Properties.Resources.icons8_success_30_OUTLINE_WHITE;
                     break;
                 case "info":
                     panelTitle.BackColor = _info; // Set the title panel color to info
-                    lbTitle.Text = "INFORMAÇÃO";
-                    gpictTitle.Image = Properties.Resources.icons8_information_64;
+                    lbTitle.Text = string.IsNullOrEmpty(title) ? "INFORMAÇÃO" : title;
+                    gpictTitle.Image = Properties.Resources.icons8_information_30_OUTLINE_WHITE;
                     break;
                 default:
                     panelTitle.BackColor = _info; // Set the title panel color to info
-                    lbTitle.Text = "INFORMAÇÃO";
-                    gpictTitle.Image = Properties.Resources.icons8_information_64;
+                    lbTitle.Text = string.IsNullOrEmpty(title) ? "INFORMAÇÃO" : title;
+                    gpictTitle.Image = Properties.Resources.icons8_information_30_OUTLINE_WHITE;
                     break;
             }
 
@@ -62,14 +55,14 @@ namespace _3DFarmManager
                     gbtOk.Visible = false; // Hide the OK button
                     break;
                 case "YesNo":
-                    gbtYes.Location = new Point(12, 141); // Position the OK button to the left
-                    gbtNo.Location = new Point(303, 141); // Position the Cancel button to the right
+                    gbtYes.Location = new Point(354, 173); // Position the OK button to the left
+                    gbtNo.Location = new Point(12, 173); // Position the Cancel button to the right
                     gbtNo.Visible = true; // Show the Cancel button
                     gbtYes.Visible = true; // Show the OK button
                     break;
                 default:
-                    gbtOk.Location = new Point(12,141); // Position the OK button to the left
-                    gbtCancel.Location = new Point(303, 141); // Position the OK button to the left
+                    gbtOk.Location = new Point(354, 173); // Position the OK button to the left
+                    gbtCancel.Location = new Point(12, 173); // Position the OK button to the left
                     gbtCancel.Visible = true; // Show the Cancel button
                     gbtOk.Visible = true; // Show the OK button
                     break;
@@ -81,7 +74,8 @@ namespace _3DFarmManager
 
         private void MsgBox_Load(object sender, EventArgs e)
         {
-
+            gbtCancel.Focus();
+            gbtNo.Focus();
         }
 
         private void gbtOk_Click(object sender, EventArgs e)
